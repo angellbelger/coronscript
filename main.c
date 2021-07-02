@@ -325,13 +325,13 @@ int main()
 
     if ( card.points <= 9)
     {
-        printf("\nRisco baixo, continue se cuidando.\n");
+        printf("\nRisco baixo, continue se cuidando. Qualquer duvida, dirija-se para o setor AMARELO\n");
     }
     else
     {
         if ( card.points >= 10 && card.points <= 19 )
         {
-            printf("\nRisco medio, se dirija para o setor AMARELO.\n");
+            printf("\nRisco medio, se dirija para o setor LARANJA.\n");
         }
         else
         {
