@@ -321,7 +321,23 @@ int main()
 
     fclose(pont_arq);
 
-    
+    printf("\nPontuacao de risco: %i", card.points);
+
+    if ( card.points <= 9)
+    {
+        printf("\nRisco baixo, continue se cuidando.\n");
+    }
+    else
+    {
+        if ( card.points >= 10 && card.points <= 19 )
+        {
+            printf("\nRisco medio, se dirija para o setor AMARELO.\n");
+        }
+        else
+        {
+            printf("\nRisco alto! Se dirija para o setor VERMELHO.\n");
+        }
+    }
     
 
 
