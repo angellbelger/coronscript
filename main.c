@@ -17,6 +17,10 @@ int main()
     struct people card; 
     card.points = 0;
 
+    FILE *pont_arq;
+
+    pont_arq = fopen("clientes.txt", "a");
+
     printf("\nHello, world.\n");
 
     printf("CPF: ");
@@ -307,8 +311,17 @@ int main()
             }
         }
     }
+    fprintf(pont_arq, "\n----------------------------------\n");
+    fprintf(pont_arq, "\nCPF: %s", card.cpf);
+    fprintf(pont_arq, "\nNome: %s", card.name);
+    fprintf(pont_arq, "\nSexo: %c", card.gender);
+    fprintf(pont_arq, "\nIdade: %i", card.age);
+    fprintf(pont_arq, "\nPontuacao: %i\n", card.points);
+    fprintf(pont_arq, "\n----------------------------------\n");
 
-    printf("%i", card.points);
+    fclose(pont_arq);
+
+    
     
 
 
